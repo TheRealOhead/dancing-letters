@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .space {
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let urls = {
+                a:'https://www.artiestick.com/toons/alphabet/ralph/arg-a-5O-tRyA.gif',
+                b:'https://www.artiestick.com/toons/alphabet/ralph/arg-B-5O-tganz2x4vs-stolen.gif',
+                c:'https://www.artiestick.com/toons/alphabet/ralph/arg-c-50-trans-url.gif',
+                d:'https://www.artiestick.com/toons/alphabet/ralph/arg-d-50-trans.gif',
+                e:'https://www.artiestick.com/toons/alphabet/ralph/arg-e-5O-trans-killing-our-serverload.gif',
+                f:'https://www.artiestick.com/toons/alphabet/ralph/arg-f-5O-tr.gif',
+                g:'https://www.artiestick.com/toons/alphabet/ralph/arg-g-50-trans.gif',
+                h:'https://www.artiestick.com/toons/alphabet/ralph/arg-h-5O-tr.gif',
+                i:'https://www.artiestick.com/toons/alphabet/ralph/arg-i-50-trans.gif',
+                j:'https://www.artiestick.com/toons/alphabet/ralph/arg-j-50-trans.gif',
+                k:'https://www.artiestick.com/toons/alphabet/ralph/arg-k-50-trans.gif',
+                l:'https://www.artiestick.com/toons/alphabet/ralph/arg-l-50-trans.gif',
+                m:'https://www.artiestick.com/toons/alphabet/ralph/arg-m-50-trans.gif',
+                n:'https://www.artiestick.com/toons/alphabet/ralph/arg-n-50-trans.gif',
+                o:'https://www.artiestick.com/toons/alphabet/ralph/arg-o-5O-tRr-a-pl0ase-ns.gif',
+                p:'https://www.artiestick.com/toons/alphabet/ralph/arg-p-50-trans.gif',
+                q:'https://www.artiestick.com/toons/alphabet/ralph/arg-q-50-4frame-trans.gif',
+                r:'https://www.artiestick.com/toons/alphabet/ralph/arg-r-50-trans.gif',
+                s:'https://www.artiestick.com/toons/alphabet/ralph/arg-s-5O-tr.gif',
+                t:'https://www.artiestick.com/toons/alphabet/ralph/arg-t-5O-tr.gif',
+                u:'https://www.artiestick.com/toons/alphabet/ralph/arg-u-5O-tr.gif',
+                v:'https://www.artiestick.com/toons/alphabet/ralph/arg-v-50-trans.gif',
+                w:'https://www.artiestick.com/toons/alphabet/ralph/arg-w-50-trans.gif',
+                x:'https://www.artiestick.com/toons/alphabet/ralph/arg-x-50-trans.gif',
+                y:'https://www.artiestick.com/toons/alphabet/ralph/arg-y-50-trans.gif',
+                z:'https://www.artiestick.com/toons/alphabet/ralph/arg-z-50-trans.gif',
+                
+                '@':'https://www.artiestick.com/toons/alphabet/punctuation/arg-at-50-trans.gif',
+                '$':'https://www.artiestick.com/toons/alphabet/punctuation/arg-dollar-50-trans.gif',
+                '?':'https://www.artiestick.com/toons/alphabet/punctuation/arg-qmark-50-trans.gif',
+                '!':'https://www.artiestick.com/toons/alphabet/numbers/arg-exclaim-50-trans.gif',
+                '&':'https://www.artiestick.com/toons/alphabet/punctuation/arg-and-50-trans.gif'
+            }
+            
+            let word = prompt().toLowerCase();
+            
+            
+            function putImage(url) {
+                let img = document.createElement('img');
+                img.src = url;
+                document.body.appendChild(img);
+            };
+            
+            for (let i = 0; i < word.length; i++) {
+                let char = word.charAt(i);
+                if (Object.keys(urls).includes(char)) {
+                    putImage(urls[char]);
+                } else if (['0','1','2','3','4','5','6','7','8','9'].includes(char)) {
+                    putImage('https://www.artiestick.com/toons/alphabet/numbers/arg-' + char + '-50-trans.gif');
+                } else {
+                    let e = document.createElement('div');
+                    e.classList = ['space'];
+                    document.body.appendChild(e);
+                };
+            };
+        </script>
+    </body>
+</html>
